@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Management</string>
+    <string name="charge_request_format">%1$s님의 충전 요청이 도착했습니다: %2$d원</string>
+</resources>

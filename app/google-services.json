@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "24332741043",
+    "firebase_url": "https://shdelivery-ee9ca-default-rtdb.firebaseio.com",
+    "project_id": "shdelivery-ee9ca",
+    "storage_bucket": "shdelivery-ee9ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24332741043:android:e50a08239fac30767783c6",
+        "android_client_info": {
+          "package_name": "com.tuk.management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_meABxeXOGtIjgXpq6go8FFmxNtVVe-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24332741043:android:1cf2b2d99e93381f7783c6",
+        "android_client_info": {
+          "package_name": "com.tuk.shdelivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_meABxeXOGtIjgXpq6go8FFmxNtVVe-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
