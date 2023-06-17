@@ -1,13 +1,11 @@
 package com.tuk.management
 
-import android.content.ContentValues.TAG
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.google.firebase.database.*
-import com.tuk.management.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,11 +49,15 @@ class MainActivity : AppCompatActivity() {
                 val chargePoint = dataSnapshot.getValue(ChargePoint::class.java)
                 val chargedate = dataSnapshot.key
                 if (chargePoint != null && chargedate != null) {
-                    val chargePointWithDate = ChargePointWithDate(chargePoint, chargedate)
-                    chargePointList.add(chargePointWithDate)
-                    chargePointAdapter.notifyDataSetChanged()
+                    // chargeAllow 필드가 0이 아니면, 해당 요청은 이미 처리되었음을 의미하므로 리스트에 추가하지 않음.
+                    if (chargePoint.chargeAllow == 0) {
+                        val chargePointWithDate = ChargePointWithDate(chargePoint, chargedate)
+                        chargePointList.add(chargePointWithDate)
+                        chargePointAdapter.notifyDataSetChanged()
+                    }
                 }
             }
+
 
             override fun onChildChanged(dataSnapshot: DataSnapshot, prevChildKey: String?) {
                 val updatedChargePoint = dataSnapshot.getValue(ChargePoint::class.java)

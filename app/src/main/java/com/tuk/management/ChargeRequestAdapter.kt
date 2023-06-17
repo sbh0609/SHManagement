@@ -21,6 +21,7 @@ class ChargeRequestAdapter(context: Context, private var dataList: MutableList<C
         button.setOnClickListener {
             val intent = Intent(context, RequestHandleActivity::class.java).apply {
                 putExtra("userId", chargeRequest.userId)
+
                 putExtra("chargeRequest", chargeRequest.chargeRequest)
                 putExtra("chargedate", chargeRequestWithDate.chargedate)
             }
